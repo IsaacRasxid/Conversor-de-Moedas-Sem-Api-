@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap Css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!--Bootstrap Js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="conversor.css">
+    <link rel="shortcut icon" href="Imagens/dinheiro icone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Converte Moedas</title>
+</head>
+<body>
+    <header>
+    <div class="container">
+        <h1 class="text-center m-5">Conversor de Moedas</h1>
+       
+    </div> 
+    </header>
+
+    <section class="container">
+
+        <div class="text-center p-2">
+        <h2 >Insira a quantidade que deseja ser convertida:</h2>    
+        <input class="m-4" type="text"  placeholder="R$" id="DinheiroReal" oninput="substituirVirgulaPorPonto(this)">
+        </div>
+        
+        <div class="text-center m-4">
+        <label class="m-3" for="">Escolha a moeda de conversão</label>
+        <select name="" id="moeda">
+        <option value="$" id="dol">Dolar</option>
+        <option value="EUR" id="eur">Euro</option>
+        <option value="LIB" id="libr">Libra</option>
+        <option value="BTC" id="bit">Bitcoin</option>
+            </select>
+        </div>
+
+        <div class="text-center">
+            <button onclick="pegaquantidade(),pegamoeda(),converte()" class="btn btn-primary">Converter</button>
+        </div>
+        
+        <div class="text-center m-5">
+            <input type="text" name="resultado" id="resultado" readonly>
+        </div>
+
+
+
+</section>
+
+<script src="conversor.js"></script>
+</body>
+</html>
